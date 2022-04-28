@@ -46,15 +46,14 @@ const team = [
     },
   ];
 
+  const writeInformation = document.getElementById("write");
+
   for (let i = 0; i < team.length; i++){
     const currentInformation = team[i];
     // console.log(currentInformation.name, currentInformation.role, currentInformation.image); 
-    const writeInformation = document.getElementById("write");
+    console.log(currentInformation.image);
     // writeInformation.innerHTML = `${currentInformation.name}`+``+`${currentInformation.role}`+``+ `${currentInformation.image}`;
-    writeInformation.innerHTML = `<img src = “img/${currentInformation.image}“`;
-
-    
-    
+    writeInformation.innerHTML += `<img src="img/${currentInformation.image}">`;
     console.log(writeInformation);
   }
 
