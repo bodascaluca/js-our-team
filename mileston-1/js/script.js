@@ -6,6 +6,13 @@
 // MILESTONE 2:
 // stampare le stesse informazioni su DOM sottoforma di stringhe
 
+// BONUS 1:
+// trasformare la stringa foto in una immagine effettiva
+// BONUS 2:
+// organizzare i singoli membri in card/schede
+// BONUS 3:
+// Utilizzare gli input presenti nella pagina per permettere all'utente di aggiungere nuovi membri del team: cliccando sul pulsante "add" viene creato un nuovo oggetto, il quale viene inserito nell'array iniziale e viene stampata una nuova card con tutte le informazioni inserite dall'utente.
+
 const team = [
     {
       name: 'Wayne Barnett',
