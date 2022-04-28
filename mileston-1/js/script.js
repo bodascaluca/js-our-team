@@ -3,6 +3,8 @@
 // Ogni membro ha le informazioni necessarie per stampare le relative informazioni: Nome, Ruolo e Foto.
 // MILESTONE 1:
 // stampare su console le informazioni di nome, ruolo e la stringa della foto
+// MILESTONE 2:
+// stampare le stesse informazioni su DOM sottoforma di stringhe
 
 const team = [
     {
@@ -39,5 +41,9 @@ const team = [
 
   for (let i = 0; i < team.length; i++){
     const currentInformation = team[i];
-    console.log(currentInformation.name, currentInformation.role, currentInformation.image)
+    // console.log(currentInformation.name, currentInformation.role, currentInformation.image); 
+    const writeInformation = document.getElementById("write");
+    // console.log(writeInformation);
+    writeInformation.innerHTML = `${currentInformation.name}`+``+`${currentInformation.role}`+``+ `${currentInformation.image}`;
   }
+
