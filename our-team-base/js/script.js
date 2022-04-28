@@ -18,24 +18,48 @@ const theArray = [
 
 const add = document.getElementById(`addMemberButton`);
 add.addEventListener("click",function(){
+
+    //Prelevo i dati
     nameValue = document.getElementById("name").value;
-    console.log(nameValue);
+
     roleValue = document.getElementById("role").value;
-    console.log(roleValue);
+
     imageValue = document.getElementById("image").value;
-    console.log(imageValue);
 
 
     const newObject = {
-        nome:"nameValue",
-        role:"",
-        image:"",
+        nome:nameValue,
+        role:roleValue,
+        image:imageValue,
     }
 
-    // let key in newObject={}
-    // .push("nameValue")
-    console.log(newObject);
+    //Push dentro l'array principale
+    theArray.push(newObject);
+    console.log(theArray)
+     
+    
+    for (let i = 0; i < theArray.length; i++){
+        addInfo = theArray[i];
+        // console.log(addInfo.image);
+        
+        const cardContainer = document.querySelector(".team-container");
+        console.log(cardContainer);
 
+        const sectionCard = document.createElement("div");
+        sectionCard.classList.add("team-card");
 
+        const newCard = document.createElement("div");
+        newCard.classList.add("card-image");
+        newCard.innerHTML += `<img src = "img/${addInfo.image}"/>`;
+        
+        sectionCard.append(newCard);
+
+        cardContainer.append(sectionCard);
+
+        // console.log(newCArd);
+    }
+    //scrivo su dom i dati ottenuti
 })
 
+// new-team-member-01.jpg
+// barbara-ramos-graphic-designer.jpg

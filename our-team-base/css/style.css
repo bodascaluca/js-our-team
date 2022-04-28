@@ -57,6 +57,13 @@ section {
   margin-right: 28px;
 }
 
+.team-card-2{
+  flex-basis: 370px;
+
+  margin-top: 50px;
+  margin-right: 28px;
+}
+
 .team-container::after {
   flex: auto;
 
