@@ -5,9 +5,9 @@
 
 const theArray = [
     {
-    nome:"Wayne Barnett",
-    role:"Founder & CEO",
-    image:"wayne-barnett-founder-ceo.jpg",
+    nome:"",
+    role:"",
+    image:"",
 },
 ];
 //Quando si clicca su add 
@@ -22,9 +22,12 @@ add.addEventListener("click",function(){
     //Prelevo i dati
     nameValue = document.getElementById("name").value;
 
+
     roleValue = document.getElementById("role").value;
 
+
     imageValue = document.getElementById("image").value;
+
 
 
     const newObject = {
@@ -38,12 +41,12 @@ add.addEventListener("click",function(){
     console.log(theArray)
      
     
-    for (let i = 0; i < theArray.length; i++){
+    for (let i = 1; i < theArray.length; i++){
         addInfo = theArray[i];
         // console.log(addInfo.image);
         
         const cardContainer = document.querySelector(".team-container");
-        console.log(cardContainer);
+        // console.log(cardContainer);
 
         const sectionCard = document.createElement("div");
         sectionCard.classList.add("team-card");
@@ -56,10 +59,35 @@ add.addEventListener("click",function(){
 
         cardContainer.append(sectionCard);
 
-        // console.log(newCArd);
+        const newText =document.createElement("div");
+        newText.classList.add("card-text");
+        newText.innerHTML = `<h3>${nameValue}</h3><p>${roleValue}</p>`;
+        console.log(newText);
+
+
+        sectionCard.append(newText);
+        console.log(sectionCard);
+
+        setTimeout(()=>{
+            const reset = resetForm();
+        },1000);
+        
+        function resetForm(){
+            // reset.documnet.getElementById("name").reset();
+
+             let nameReset = document.getElementById("name").reset();
+
+
+             let roleReset = document.getElementById("role").reset();
+        
+        
+             let imageReset = document.getElementById("image").reset();
+        
+        }
     }
     //scrivo su dom i dati ottenuti
 })
+
 
 // new-team-member-01.jpg
 // barbara-ramos-graphic-designer.jpg
