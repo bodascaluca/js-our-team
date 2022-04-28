@@ -53,7 +53,7 @@ const team = [
     // console.log(currentInformation.name, currentInformation.role, currentInformation.image); 
     console.log(currentInformation.image);
     // writeInformation.innerHTML = `${currentInformation.name}`+``+`${currentInformation.role}`+``+ `${currentInformation.image}`;
-    writeInformation.innerHTML += `<img src="img/${currentInformation.image}">`;
+    writeInformation.innerHTML += `<img src="img/${currentInformation.image}"><h2>${currentInformation.name}</h2><h4>${currentInformation.role}</h4>`;
     console.log(writeInformation);
   }
 
